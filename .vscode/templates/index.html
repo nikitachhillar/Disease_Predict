@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='../static/styles/index.css') }}">
+<title>BeFit</title>
+</head>
+<body onload="typeWriter();">
+    <!--Navigation Bar-->
+<div class="parallax">  
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="#hom">Befit</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-6 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+            </ul>
+        </div>
+        <!--Login, Register-->
+        {% if session['name'] %}
+        <li>
+            <a href="logout">Logout</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+           <a class="nav-link" href="login">Login</a>
+          </li>
+          
+        <li class="nav-item">
+            <a class="nav-link" href="register">Register</a>
+        </li>
+        {% endif %}
+    </nav>
+    <!--Modal for Login-->
+    
+    <!--Home Section-->
+ <center> 
+<div class="home">
+    <a name="hom"></a>
+    <div class="row">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-3">BeFit</h1>
+                <hr class="my-2">
+                <p class="lead" id="demo"> </p>
+                <i class="fas fa-shoe-prints"></i><i class="fas fa-shoe-prints"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    </center>
+        <br><br><br><br><br><br><br><br>
+    <!--About Section-->
+    <div class="abt" >
+        <a name="about"></a>
+        <br><br><br>
+        <h1>About Us</h1>
+        <center>
+        <strong><em><h4><b>BeFit, is a portal where one can diagnose the disease based on the symptoms which one is suffering from.
+        You can enter the required values in the given form and diagnose the risk.</b> </h4></em></strong>
+        </center>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+<script src="{{url_for('static', filename='../static/styles/index.js')}}"></script>
+</body>
+</html>

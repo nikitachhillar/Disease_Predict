@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DashBoard </title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='../static/styles/disease.css') }}">
+</head>
+
+<b>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" style="padding-left:10px;" href="#hom">Befit</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-6 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#search">Search </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#symptom">About Disease</a>
+                </li>
+                <li class="nav-item" id="logout">
+                    <a class="nav-link" href="logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <a name="search"></a>
+    <div class="row">
+        <center>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-3">Search</h1>
+                <hr class="my-2">
+                <div  id="wrapper">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for your Symptom" title="Type in a name">
+
+                    <ul id="myUL">
+                        
+                      <div id="h">
+                        <li><a href="#heart">Chest pain</a></li>
+                        <li><a href="#heart">Chest tightness</a></li>
+                        <li><a href="#heart">Chest pressure</a></li>
+                        <li><a href="#heart">Chest discomfort</a></li>
+                        <li><a href="#heart">Coldness in legs or arms</a></li>
+                        <li><a href="#heart">Dizziness</a></li>
+                        <li><a href="#heart">Fainting</a></li>
+                        <li><a href="#heart">Lightheadedness</a></li>
+                        <li><a href="#heart">Numbness</a></li>
+                        <li><a href="#heart">Mild jaundice</a></li>
+                        <li><a href="#heart">Pain in upper abdomen</a></li>
+                        <li><a href="#heart">Pain in throat</a></li>
+                        <li><a href="#heart">Racing heartbeat</a></li>
+                        <li><a href="#heart">Shortness of breath</a></li>
+                        <li><a href="#heart">Slow heartbeat</a></li>
+                    </div>
+                    
+        </p>
+    </class>
+        
+    <div class="heart">
+        <a name="heart"></a>
+        <button type="button" class="collapsible">Heart Disease</button>
+        <class class="content">
+            <p>
+                <h1> Heart Disease</h1>
+                Heart disease refers to any condition affecting the heart. There are many types, some of which are preventable.
+                Unlike cardiovascular disease, which includes problems with the entire circulatory system, heart disease affects only the heart.
+                According to the Centers for Disease Control and Prevention (CDC), heart disease is the leading cause of death in the United States. Around 1 in 4 deathsTrusted Source in the U.S. occur due to heart disease, and it affects all genders as well as all racial and ethnic groups.</p>
+                <h4 >Symptom</h4>
+                    <ul id="search_para">
+                        <li>Chest pain</li>
+                        <li>Chest tightness</li>
+                        <li>Chest pressure</li>
+                        <li>Chest discomfort</li>
+                        <li>Coldness in legs or arms</li>
+                        <li>Dizziness</li>
+                        <li>Fainting</li>
+                        <li>Lightheadedness</li>
+                        <li>Numbness</li>
+                        <li>Mild jaundice</li>
+                        <li>Pain in upper abdomen</li>
+                        <li>Pain in throat</li>
+                        <li>Racing heatbeat</li>
+                        <li>Shortness of breath</li>
+                        <li>Slow heartbeat</li>
+                    </ul>
+            </p>
+        </class>
+            
+            <h3> Predicting Heart risk </h3>
+            <button  type="submit" class="btn btn-warning btn-block btn-large"><a href=Heart >Predict</a></button>
+            <br>
+        <br>
+        
+    
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>    
+    <script src="{{url_for('static', filename='../static/styles/disease.js')}}"></script>    
+        
+</body>
+</html>

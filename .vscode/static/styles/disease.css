@@ -1,0 +1,117 @@
+.row{
+    
+    padding-top:250px;
+    padding-bottom: 250px;
+}
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+  .diabetes h4{
+      padding-left: 12px;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  #myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+  
+  #myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #myUL li a {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block
+  }
+  
+  #myUL li a:hover:not(.header) {
+    background-color: #eee;}
+.diabetes{
+    padding-top: 50px;
+    padding-bottom: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
+   
+}
+#logout{
+  padding-left: 1180px;
+}
+#d li a:hover{
+  background-color:pink !important;
+}
+#h li a:hover{
+  background-color:plum !important;
+}
+#m li a:hover{
+  background-color:navy !important;
+}
+#l li a:hover{
+  background-color:red !important;
+}
+.heart{
+    padding-top: 50px;
+    padding-bottom: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.malaria {
+    padding-top: 50px;
+    padding-bottom: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.liver{
+  padding-top: 50px;
+  padding-bottom: 200px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.diabetes .collapsible{
+  background-color: pink;
+}
+.heart .collapsible{
+  background-color: plum;
+}
+.malaria .collapsible{
+  background-color: navy;
+}
+.liver .collapsible{
+  background-color: red;
+}

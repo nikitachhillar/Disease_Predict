@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Form </title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='../static/styles/diabetes.css') }}">
+</head>
+
+<body>
+
+
+    <div class="heart">
+        <h1>Predict Heart Risk Analysis</h1>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('Heart')}}"method="post">
+            Age:<input type="text" name="age" placeholder="age" required="required" /><br>
+            Sex:<input type="text" name="sex" placeholder="(1 = male; 0 = female)" required="required" /><br>
+            Chest pain:<input type="text" name="cp" placeholder="chest pain type(0,1,3)" required="required" /><br>
+            Resting blood pressure:<input type="text" name="trestbps" placeholder="resting blood pressure in mm Hg" required="required" /><br>
+            Cholestrol:<input type="text" name="chol" placeholder="serum cholestoral in mg/dl" required="required" /><br>
+            Fasting blood sugar:<input type="text" name="fbs" placeholder="(fasting blood sugar &gt; 120 mg/dl) (1 = true; 0 = false)" required="required" /><br>
+            resting electrocardiographic results:<input type="text" name="restecg" placeholder="(1 = yes; 0 = no)" required="required" /><br>
+            Maximum heart rate achieved:<input type="text" name="thalach" placeholder="maximum heart rate" required="required" /><br>
+            Exercise induced angina:<input type="text" name="exang" placeholder="(1 = yes; 0 = no)" required="required" /><br>
+            ST depression:<input type="text" name="oldpeak" placeholder="ST depression induced by exercise relative to rest" required="required" /><br>
+            Slope:<input type="text" name="slope" placeholder="the slope of the peak exercise ST segmen" required="required" /><br>
+            
+            Number of major vessels coloured by flouroscopy:<input type="text" name="ca" placeholder="number of major vessels (0-3) " required="required" /><br>
+            Thal:<input type="text" name="thal" placeholder="3 = normal; 6 = fixed defect; 7 = reversable defect"  required="required" /><br>      
+    
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    
+       <br>
+       <br>
+       {{ prediction_text }}
+    
+     </div>
+
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>    
+<script src="{{url_for('static', filename='../static/styles/diabetes.js')}}"></script>    
+    
+</body>
+</html>

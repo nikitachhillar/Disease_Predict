@@ -1,0 +1,41 @@
+
+.diabetes h1{
+    background-color: olive;
+    text-align: center;
+    padding:20px 20px 20px 20px;
+}
+.malaria h1{
+    background-color: burlywood;
+    text-align: center;
+    padding:20px 20px 20px 20px;
+}
+.heart h1{
+    background-color: lavender;
+    text-align: center;
+    padding:20px 20px 20px 20px;
+}
+.liver h1{
+    background-color: palevioletred;
+    text-align: center;
+    padding:20px 20px 20px 20px;
+}
+form{
+    text-align: center;
+    padding:60px 60px 60px 60px;
+}
+
+input[type="text"]
+ {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 10px 10px;
+    width: 250px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+}

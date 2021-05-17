@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Heart Result</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='../static/styles/result.css') }}">
+    </head>
+    <body>
+
+            <!-- Heart Disease Result -->
+		<div class="heart">
+			{% if prediction==1 %}
+            <span style='font-size:200px;'>&#128542;</span>
+				<h1>Prediction: <span class='danger'>You are at high risk of heart disease.</span></h1>
+				
+			{% elif prediction==0 %}
+            <svg viewbox="0 0 10 10">
+                <circle class="smile" cx="5" cy="5" r="4"
+                  stroke-dashoffset="-.5"
+                  stroke-dasharray="11.5,13.6327" />
+                <circle class="eyes" cx="5" cy="5" r="4" 
+                  stroke-dashoffset="-15.5"
+                  stroke-dasharray="0,6.6327,0,17.5" />
+              </svg>
+				<h1>Prediction: <span class='safe'>You are at a lower risk of heart disease.</span></h1>
+				
+			{% endif %}
+            <button  type="submit" class="btn btn-warning btn-block btn-large"><a href=disease >BACK</a></button>
+        </div>
+        
+    </body>
+    </html>

@@ -1,0 +1,44 @@
+nav a{
+    margin-left: 8-px;
+    margin-right: 8px;
+}
+.parallax {
+    /* The image used */
+    background-image: url(../images/1314893.jpg);
+                        
+  
+    /* Set a specific height */
+    height: 1000px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    
+  }
+  .container p{
+      font-size: 25px;
+  }
+  .container h1{
+      text-align: center;
+      font-size: 70px;
+      margin-top: 200px;
+  }
+  .container i{
+      font-size: 40px;
+  }
+  .abt h1{
+      text-align: center;
+  }
+  .abt h5{
+  padding-top: 51px;
+  height: 130px;
+  width: 1500px;
+  text-align: center;
+  font-weight: 500px ;
+}
+
+
+ 
