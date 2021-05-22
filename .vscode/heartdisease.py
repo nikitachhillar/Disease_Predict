@@ -53,4 +53,4 @@ print(classification_report(y_test, y_pred6))
 
 
 filename2 = 'heart.pkl'
-pickle.dump(mlp, open(filename2, 'wb'))
+pickle.dump(classifier2, open(filename2, 'wb'))
