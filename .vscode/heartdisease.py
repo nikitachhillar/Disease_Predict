@@ -26,31 +26,31 @@ print(df.info())
 df.hist(figsize=(16,16))
 plt.show()
 
-X = df.iloc[:, :-1].values
-y = df.iloc[:, -1].values
-
-from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X,y,test_size = 0.2, random_state = 1)
-
+#assigning and normalizing 
+Y = df.target
+x = df.drop("target", axis = 1)
+columns = x.columns
 from sklearn.preprocessing import StandardScaler
-sc = StandardScaler()
-X_train = sc.fit_transform(X_train)
-X_test = sc.transform(X_test)
+scaler = StandardScaler()
+X = scaler.fit_transform(x)
+data_x = pd.DataFrame(X, columns = columns)
+
+#splitting 
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(data_x, Y, test_size = 0.20, random_state = 40)
+
+#applying model
+
+from sklearn.metrics import classification_report 
+from sklearn.neighbors import KNeighborsClassifier
+
+classifier2 = KNeighborsClassifier(n_neighbors=30) # get instance of model
+classifier2.fit(X_train, y_train) # Train/Fit model 
+
+y_pred6 = classifier2.predict(X_test) # get y predictions
+print(classification_report(y_test, y_pred6))
 
 
-from sklearn.ensemble import RandomForestClassifier
-
-classifier2 = RandomForestClassifier(random_state=1)# get instance of model
-classifier2.fit(X_train, y_train)
-
-#Neural Network
-from sklearn.neural_network import MLPClassifier
-
-mlp = MLPClassifier(hidden_layer_sizes=(8,8,8), activation='relu', solver='adam', max_iter=500)
-mlp.fit(X_train,y_train)
-
-predict_train = mlp.predict(X_train)
-predict_test = mlp.predict(X_test)
 
 filename2 = 'heart.pkl'
 pickle.dump(mlp, open(filename2, 'wb'))
